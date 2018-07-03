@@ -3,21 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 
-
-
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hudrogen</groupId>
-    <artifactId>spring-boot-pf4j</artifactId>
+    <artifactId>application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-boot-app</name>
-    <description>Demo project for Spring Boot</description>
+    <name>application</name>
+    <description>Base application for pf4j</description>
 
     <parent>
         <groupId>com.hudrogen</groupId>
-        <artifactId>parent-spring-pf4j</artifactId>
+        <artifactId>parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -53,6 +51,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.pf4j</groupId>
+            <artifactId>pf4j-spring</artifactId>
+            <version>0.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hudrogen</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
