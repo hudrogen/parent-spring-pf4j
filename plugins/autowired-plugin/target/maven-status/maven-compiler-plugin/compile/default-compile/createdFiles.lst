@@ -1,6 +1,1 @@
 META-INF\extensions.idx
-ru\innopolis\autowiredplugin\SpringConfig.class
-ru\innopolis\autowiredplugin\AutowiredPlugin.class
-ru\innopolis\autowiredplugin\AutowiredPlugin$AutowiredGreeting.class
-ru\innopolis\autowiredplugin\MyAutowiredComponent.class
-ru\innopolis\autowiredplugin\MainApplication.class

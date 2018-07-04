@@ -8,5 +8,4 @@ public class MyAutowiredComponent {
     public String getMessage(){
         return "String from autowired plugin";
     }
-
 }

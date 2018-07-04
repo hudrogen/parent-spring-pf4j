@@ -1,10 +1,10 @@
 package ru.innopolis.autowiredplugin;
 
 import com.hudrogen.api.Greeting;
+import com.hudrogen.controller.BaseController;
 import org.pf4j.Extension;
 import org.pf4j.PluginWrapper;
 import org.pf4j.spring.SpringPlugin;
-import org.pf4j.spring.SpringPluginManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -34,6 +34,22 @@ public class AutowiredPlugin extends SpringPlugin {
 
         public String getGreeting() {
             return myAutowiredComponent.getMessage();
+        }
+    }
+
+    @Extension
+    public static class AutowiredBaseController implements BaseController {
+
+//        @Autowired
+//        private MyAutowiredComponent myAutowiredComponent;
+
+
+        public String calcMetric() {
+            return "metrics are calculated";
+        }
+
+        public String getMetric() {
+            return "avg metric value is 56";
         }
     }
 }
