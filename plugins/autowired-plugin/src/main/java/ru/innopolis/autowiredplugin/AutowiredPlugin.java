@@ -22,7 +22,6 @@ public class AutowiredPlugin extends SpringPlugin {
 
     protected ApplicationContext createApplicationContext() {
 
-        /**Это должен быть родительским контекстом для оставльных*/
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.setClassLoader(getWrapper().getPluginClassLoader());
         applicationContext.register(SpringConfig.class);

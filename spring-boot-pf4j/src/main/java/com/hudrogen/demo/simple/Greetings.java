@@ -1,4 +1,4 @@
-package com.hudrogen.demo;
+package com.hudrogen.demo.simple;
 
 import com.hudrogen.api.Greeting;
 import org.springframework.beans.factory.annotation.Autowired;

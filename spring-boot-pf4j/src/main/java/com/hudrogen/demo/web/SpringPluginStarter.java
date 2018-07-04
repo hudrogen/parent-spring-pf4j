@@ -1,4 +1,4 @@
-package com.hudrogen.demo;
+package com.hudrogen.demo.web;
 import java.util.List;
 import java.util.Set;
 
@@ -13,6 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
+
+/**
+ * Чтобы диспатчер сервлет создался после подгрузки контекста с плагина
+ * Пример взят отсюда
+ * https://github.com/pf4j/pf4j/issues/126#issuecomment-281388628
+ * */
 
 @Service
 public class SpringPluginStarter {
