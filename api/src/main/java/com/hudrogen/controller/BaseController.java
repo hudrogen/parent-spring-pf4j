@@ -1,6 +1,8 @@
 package com.hudrogen.controller;
 
-public interface BaseController {
+import org.pf4j.ExtensionPoint;
+
+public interface BaseController extends ExtensionPoint {
 
     String calcMetric();
 

@@ -1,5 +1,6 @@
 package com.hudrogen.demo;
 
+import com.hudrogen.controller.BaseController;
 import org.pf4j.PluginManager;
 import org.pf4j.PluginWrapper;
 import org.pf4j.spring.SpringPluginManager;
@@ -14,12 +15,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
 
 	@Autowired
 	private ApplicationContext applicationContext;
+
 
 	public static void main(String[] args) {
 		System.setProperty("pf4j.pluginsDir", "C:\\Users\\salimgaraev\\IdeaProjects\\parent-spring-pf4j\\customeshop");
@@ -30,8 +33,15 @@ public class DemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 
+		/**Ниже работает без спринг плагин стартера*/
 		Greetings greetings = applicationContext.getBean(Greetings.class);
 		greetings.printGreetings();
+
+		BaseControllers contr = applicationContext.getBean(BaseControllers.class);
+		List<BaseController> baseControllerList = contr.getBaseControllerList();
+		System.out.println("Количество полученных бинов= " + baseControllerList.size());
+		//полученный классы интерпретировать как контроллеры
+
 
 		//Object autoController = applicationContext.getBean("myAutowiredComponent");
 
